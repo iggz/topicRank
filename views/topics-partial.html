@@ -1,0 +1,30 @@
+<section class="section">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Rank</th>
+            </tr>
+        </thead>
+        ${topicsList.map(topic => `
+            <tr>
+                <td>${topic.topics}</td> 
+                <td>${topic.ranking}</td>
+            </tr>
+        `).join('')}  
+        <!-- the join does not seem necessary for this file -->
+    </table>
+</section>
+<section class="section">
+    <p>Add a new topic</p>
+    <form action="/topics" method="POST">
+        <label>Topic
+            <input type="text" name="topic"/>
+        </label>
+        <label>Rank
+            <input type="text" name="rank"/>
+        </label>
+        <button type="submit" class='is-primary'>Submit</button>
+    </form>
+</section>
+
