@@ -17,9 +17,6 @@ router.get('/', async (req, res, next) => {
     });
 });
 
-
-
-
 router.post('/', (req,res) => {
     const { topic, rank } = req.body;
     
